@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="euc-kr">
+   <title> CSS Access using JavaScript </title>
+</head>
+
+<body>
+
+   <div id="outerBox" style="background: midnightblue; width: 550px; height:300px;" />
+
+   <div id="innerBox" style="background: powderblue; width: 450px; height:200px;
+            position: absolute; left: 50px; top: 50px;" />
+
+   <img id="img1"
+      src="https://images.pexels.com/photos/5245865/pexels-photo-5245865.jpeg?auto=compress&cs=tinysrgb&w=400"
+      width="100px" style="position: absolute; left: 50px; top: 25px; visibility: visible;" />
+
+   <img id="img2"
+      src="https://images.pexels.com/photos/2531709/pexels-photo-2531709.jpeg?auto=compress&cs=tinysrgb&w=400"
+      width="100px" style="position: absolute; left: 175px; top: 25px; visibility: visible;" />
+
+   <img id="img3"
+      src="https://images.pexels.com/photos/4737484/pexels-photo-4737484.jpeg?auto=compress&cs=tinysrgb&w=400"
+      width="100px" style="position: absolute; left: 300px; top: 25px; visibility: visible;" />
+   </div>
+
+   </div>
+
+   <!--toggle visibility-->
+   <script type="text/javascript">
+      function toggleVisibility(id) {
+         var dom = document.getElementById(id);
+
+         if (dom.style.visibility == "visible")
+            dom.style.visibility = "hidden";
+         else
+            dom.style.visibility = "visible";
+      }
+   </script>
+
+   Toggle Visibility:
+   <button onclick="toggleVisibility('img1');">Image 1</button>
+   <button onclick="toggleVisibility('img2');">Image 2</button>
+   <button onclick="toggleVisibility('img3');">Image 3</button>
+
+   <!--change position-->
+   <script type="text/javascript">
+      function changePositions() {
+         for (i = 1; i <= 3; i++) {
+            var left = document.getElementById("left" + i).value;
+            var top = document.getElementById("top" + i).value;
+            document.getElementById("img" + i).style.left = left + "px";
+            document.getElementById("img" + i).style.top = top + "px";
+         }
+      }
+   </script>
+
+   <form>
+      Image1: Left <input id="left1" size="2" type="text" />
+      Top <input id="top1" size="2" type="text" /> <br />
+
+      Image2: Left <input id="left2" size="2" type="text" />
+      Top <input id="top2" size="2" type="text" /> <br />
+
+      Image3: Left <input id="left3" size="2" type="text" />
+      Top <input id="top3" size="2" type="text" />
+
+      <input type="button" value="Move All" onclick="changePositions();" />
+   </form>
+
+   <!--change color-->
+   <script type="text/javascript">
+      function changeColor(id, color) {
+         document.getElementById(id).style.background = color;
+      }
+   </script>
+
+   Outer Box:
+   <button onclick="changeColor('outerBox', 'red');"> Red </button>
+   <button onclick="changeColor('outerBox', 'green');"> Green </button>
+   <button onclick="changeColor('outerBox', 'blue');"> Blue </button>
+   <button onclick="changeColor('outerBox', 'grey');"> Grey </button>
+   <button onclick="changeColor('outerBox', 'white');"> White </button>
+   <br />
+
+   Inner Box:
+   <button onclick="changeColor('innerBox', 'red');"> Red </button>
+   <button onclick="changeColor('innerBox', 'green');"> Green </button>
+   <button onclick="changeColor('innerBox', 'blue');"> Blue </button>
+   <button onclick="changeColor('innerBox', 'grey');"> Grey </button>
+   <button onclick="changeColor('innerBox', 'white');"> White </button>
+
+</body>
+
+</html>

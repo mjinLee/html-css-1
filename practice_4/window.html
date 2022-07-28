@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="euc-kr">
+    <title> window Object </title>
+</head>
+
+<body>
+
+    <!--alert(), confirm()-->
+    <script type="text/javascript">
+        alert("alert()를 사용합니다");
+        var answer = confirm("confirm()을 사용합니까?");
+        document.write("Answer = " + answer + "<br/>");
+    </script>
+    <br>
+
+    <!--prompt()-->
+    <script type="text/javascript">
+        var win;
+        function open_window() {
+            var url = prompt("URL을 입력하세요. ex.https://");
+            if (url) win = window.open(url);
+        }
+    </script>
+
+    <button onclick="open_window();">URL을 입력하여 새창 열기</button>
+    <button onclick="win.close();">창 닫기</button>
+
+    <br>
+    <!--팝업창 열기-->
+    <button onclick="window.open('https://www.naver.com','window_name',
+'width=400,height=500,location=no,status=no,scrollbars=yes');">NAVER 팝업열기</button>
+</body>
+
+</html>

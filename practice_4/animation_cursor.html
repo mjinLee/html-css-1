@@ -1,0 +1,54 @@
+<!--참고 자료-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title> Exercise9-1 </title>
+  <style type="text/css">
+    .trans1 {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 50px;
+      left: 0px;
+      background: orange;
+      -webkit-transition-property: left, color, -webkit-transform;
+      -webkit-transition-duration: 2s, 2s;
+      -webkit-transition-timing-function: ease-in;
+      -webkit-transition-delay: 0s
+    }
+
+    .trans1:hover {
+      left: 200px;
+      background: blue;
+      -webkit-transform: rotate(360deg);
+    }
+
+    .trans2 {
+      width: 100px;
+      height: 100px;
+      position: relative;
+      top: 50px;
+      left: 200px;
+      background: blue;
+      -webkit-transition-property: left, color, -webkit-transform;
+      -webkit-transition-duration: 2s, 2s;
+      -webkit-transition-timing-function: ease-in;
+      -webkit-transition-delay: 0s
+    }
+
+    .trans2:hover {
+      left: 0px;
+      background: orange;
+      -webkit-transform: rotate(360deg);
+    }
+  </style>
+</head>
+
+<body>
+  <div class="trans1"></div>
+  <div class="trans2"></div>
+</body>
+
+</html>

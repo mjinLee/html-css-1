@@ -1,0 +1,86 @@
+<!--참고 자료-->
+<!DOCTYPE html>
+<html>
+
+<head>
+   <meta charset="utf-8">
+   <title> Exercise9-2 </title>
+   <style type="text/css">
+      @-webkit-keyframes myAnimation1 {
+         0% {
+            left: 0px;
+            background: orange;
+         }
+
+         50% {
+            top: 100px;
+            left: 100px;
+            background: blue;
+            -webkit-transform: rotate(180deg);
+         }
+
+         100% {
+            left: 200px;
+            background: orange;
+            -webkit-transform: rotate(360deg);
+         }
+      }
+
+      @-webkit-keyframes myAnimation2 {
+         0% {
+            left: 200px;
+            background: blue;
+         }
+
+         50% {
+            top: 100px;
+            left: 100px;
+            background: orange;
+            -webkit-transform: rotate(180deg);
+         }
+
+         100% {
+            left: 0px;
+            background: blue;
+            -webkit-transform: rotate(360deg);
+         }
+      }
+
+      .trans1 {
+         width: 100px;
+         height: 100px;
+         position: relative;
+         top: 50px;
+         left: 0px;
+         background: orange;
+         -webkit-animation-name: myAnimation1;
+         -webkit-animation-duration: 3s;
+         -webkit-animation-delay: 0.5s;
+         -webkit-animation-timing-function: ease-in;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-direction: alternate;
+      }
+
+      .trans2 {
+         width: 100px;
+         height: 100px;
+         position: relative;
+         top: 50px;
+         left: 200px;
+         background: orange;
+         -webkit-animation-name: myAnimation2;
+         -webkit-animation-duration: 3s;
+         -webkit-animation-delay: 0.5s;
+         -webkit-animation-timing-function: ease-in;
+         -webkit-animation-iteration-count: infinite;
+         -webkit-animation-direction: alternate;
+      }
+   </style>
+</head>
+
+<body>
+   <div class="trans1"></div>
+   <div class="trans2"></div>
+</body>
+
+</html>

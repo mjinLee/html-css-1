@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<!-- Canvas �ؽ�Ʈ �׷� �ֱ� ���� -->
+<html>
+<head>
+<title> Canvas Text Drawings </title>
+</head>
+<body>
+
+<canvas id="myCanvas" width="400" height="300"></canvas>
+
+<script type="text/javascript">
+  var canvas = document.getElementById("myCanvas");
+  var context = canvas.getContext("2d");
+
+  context.rect(0, 0, 400, 300);
+  context.stroke();
+
+  var text1 = "HTML5 Text Drawing!";
+  var text2 = "Left aligned text";
+  var text3 = "Center aligned text";
+  var text4 = "Right aligned text";
+
+  context.font = "italic 16pt Times New Roman";
+  context.fillStyle = "blue";  
+  context.fillText(text1, 200, 50);
+
+  context.font = "12pt Tahoma";
+  context.fillStyle = "red";  
+  context.textAlign = "left";
+  context.fillText(text2, 200, 100);
+
+  context.font = "bold 24pt Courier New";
+  context.strokeStyle = "black";
+  context.textAlign = "center";
+  context.lineWidth = 1;
+  context.strokeText(text3, 200, 150);
+  context.lineWidth = 2;
+  context.strokeText("lineWidth=2", 200, 200);
+
+  context.font = "bold 16pt Batang";
+  context.fillStyle = "green";  
+  context.textAlign = "right";
+  context.fillText(text4, 200, 250);
+</script>
+
+<!---->
+<h4>표</h4>
+  <table border="1">
+	<tr>
+		<td colspan="2">header영역</td>
+	</tr>
+	<tr>
+		<td colspan="2">nav영역</td>
+	</tr>
+	<tr>
+		<td>article section1</td>
+		<td rowspan="3">aside영역</td>
+	</tr>
+	<tr>
+		<td>article section2</td>
+	</tr>
+	<tr>
+		<td>article section3</td>
+	</tr>
+	<tr>
+		<td colspan="2">footer 영역</td>
+	</tr>
+  </table>
+
+</body>
+</html>
