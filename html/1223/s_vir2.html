@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        /*
+        .contents :first-child{
+            color: red;
+        }
+        .contents :last-child{
+            color: blue;
+            font-weight: bold;
+        }
+        .contents p:first-of-type {
+            color: green;
+            font-weight: bold;
+        }
+        .contents p:last-of-type {
+            color: orange;
+            font-weight: bold;
+        }*/
+        .contents :nth-child(2){
+            color: orange;
+            font-weight: bold;
+        }
+        .contents :nth-last-child(2){
+            color: olivedrab;
+            font-weight: bold;
+        }
+        .contents p:nth-of-type(2){
+            color: blueviolet;
+            font-weight: bold;
+        }
+        .contents p:nth-last-of-type(3){
+            color: red;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <form>
+        <div class="contents">
+            <h1>제목</h1>
+            <p>내용 1</p>
+            <p>내용 2</p>
+            <p>내용 3</p>
+
+        </div>
+    </form>
+</body>
+</html>

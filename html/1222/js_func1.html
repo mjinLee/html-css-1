@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <h1>function</h1>
+    <!--
+    <script>
+        function addNumber(a,b){
+            var sum = a + b;
+            alert(sum);
+        }
+        addNumber(1,2);
+    </script>
+    <script>
+        function addNumber(){
+            var n1 = 2;
+            var n2 = 3;
+            var sum = n1 + n2;
+            alert("결과값 : "+sum);
+        }
+        addNumber();
+    </script>
+    -->
+    <script>
+        function addNumber(){
+            var sum = 10 + 20; // 지역변수
+            multi = 10 * 20; // 전역변수
+        }
+        addNumber();
+        //console.log(sum); // err : 지역변수는 함수밖에서 사용 불가
+        console.log(multi); // 200
+        var abc="a"; // 전역변수
+        console.log(abc); // a
+        efg = 10 + 20; // 전역변수
+        console.log(efg); // 30
+    </script>
+</body>
+</html>

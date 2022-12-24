@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+    <style>
+        body {
+            text-align: center;
+        }
+        div {
+            display: inline-block;
+            padding: 0 20px 30px 20px;
+            margin: 15px;
+            border: 1px solid #ccc;
+            line-height: 2;
+        }
+        div h3 {
+            text-align: center;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>구구단</h1>
+    <script>
+        var num = prompt("구구단의 단을 입력");
+        var i=1;
+        if(num !== null){
+            document.write("<div>");
+            document.write("<h3>"+num+"단</h3>");
+            while(i < 10){
+                document.write(num+" X "+i+" = "+num*i+"<br>");
+                i++;
+            }     
+            document.write("</div>");                       
+        }else
+            alert("입력 취소")
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var userNumer = prompt("숫자 입력");
+        if(userNumer !== null){ // 프롬프트 창에서 '취소' 버튼 누르면 변수에 null이 저장
+            /*if(userNumer % 3 === 0)
+                alert("3의 배수");
+            else
+                alert("3의 배수 아님"); */
+            (userNumer % 3 === 0) ? alert("3의 배수") : alert("3의 배수 아님");
+        }
+        else
+            alert("입력 취소됨");
+    </script>
+
+    <script>
+        var numOne = prompt("50 미만의 숫자 입력");
+        var numTwo = prompt("50 미만의 숫자 입력");
+
+        //if(numOne < 10 || numTwo < 10)
+        if(numOne < 10 && numTwo < 10)
+            alert("숫자 2개중에서 최소한 하나는 10미만");
+        else
+            alert("숫자 2개중에서 10미만인 숫자가 없음");
+    </script>
+</body>
+</html>
