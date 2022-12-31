@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function calsSum(n){
+            let sum = 0;
+            for(let i=1; i<n+1; i++){
+                sum += i;
+                //sum = 100;
+            }
+            //let sum; // 재선언 불가
+            //console.log(i);
+            console.log(sum);     
+        }
+        //console.log(sum);
+        calsSum(10);
+    </script>
+    <script>
+        var x = 10;
+        function displayNumber(){
+            console.log("x is "+x);
+            console.log("y is "+y);
+            //let y = 20; // 호이스팅(변수를 나중에 선언) 불가
+            var y = 20;
+        }
+        displayNumber();
+    </script>
+    <script>
+        const currentYear = 2020;
+        console.log(currentYear);
+        //const currentYear; // const로 선언했기때문에 재선언 불가
+        //currentYear = 2022; // 재할당 불가
+        //console.log(currentYear);
+    </script>
+</body>
+</html>

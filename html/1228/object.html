@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //var num = new Array(); // 배열 크기 지정 X
+        //var num1 = new Array(4); // 배열 크기(4) 지정하여 선언
+        //var n = ["one","two"]; // 초기값 지정하여 배열 선언
+        //var n2 = Array("three","four");
+
+        var nu = ["o","t","th","f"];
+        for(i=0; i<nu.length; i++){
+            //document.write("<p>"+nu[i]+"</p>");
+            console.log(nu[i]);            
+        }
+        console.log(nu); // (4) ['o', 't', 'th', 'f']
+        nu.push("fi","s");
+        console.log(nu); // (6) ['o', 't', 'th', 'f', 'fi', 's']
+        nu.unshift("z"); // 요소의 가장 앞에 추가
+        console.log(nu); // (7) ['z', 'o', 't', 'th', 'f', 'fi', 's']
+        
+        nu.pop();
+        console.log(nu); // (6) ['z', 'o', 't', 'th', 'f', 'fi']
+        nu.shift(); // 제일 앞에 있는 요소([0]) 제거
+        console.log(nu); // (5) ['o', 't', 'th', 'f', 'fi']
+
+        nu.splice(4); // 인덱스[4]부터 요소 제거
+        console.log(nu); // (4) ['o', 't', 'th', 'f']
+        nu.splice(3,1); // 인덱스[3]부터 1개 삭제
+        console.log(nu); // (3) ['o', 't', 'th']
+        nu.splice(2,1,"test"); // 인덱스[2]부터 1개 삭제, "test" 추가
+        console.log(nu); // (3) ['o', 't', 'test']
+        
+        console.log(nu.indexOf('o')); // 0 // 'o'의 인덱스 번호 => 검색 기능
+        console.log(nu.indexOf('t')); // 1
+    </script>
+    <script>
+        var currentYear = new Date(); // 현재 날짜
+        var currentYear2 = new Date("2020-02-25");
+        var currentYear3 = new Date("202-02-25T18:00:00"); // 날짜'T'시간
+    </script>
+</body>
+</html>
