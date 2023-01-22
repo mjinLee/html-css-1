@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1> DOM을 공부합시다</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더보기1</a> 
+        <a href="#" onclick="addP2(); this.onclick='';">더보기2</a>
+    </div>
+    <div id="info"></div>
+    <div id="info2"></div>
+
+    <script>
+        function addP(){
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("더보기1의 내용");   
+            newP.appendChild(txtNode);    
+            document.getElementById("info").appendChild(newP);
+        }
+        function addP2(){
+            var newP2 = document.createElement("p");
+            var txtNode2 = document.createTextNode("더보기2의 내용");
+            document.getElementById("info2").appendChild(newP2);
+            newP2.appendChild(txtNode2);
+        }               
+    </script>
+</body>
+</html>

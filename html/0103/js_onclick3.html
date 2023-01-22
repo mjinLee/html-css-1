@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ONCLICK</title>
+    <script>
+        function prNum(){
+            var n1 = parseInt(prompt("n1 값 입력 : "));
+            var n2 = parseInt(prompt("n2 값 입력 : ")); 
+            var res = n1 + n2;
+            div1.innerText = n1+" + "+n2+" = "+res;
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="ADD" onclick="prNum();" id="btnPr">
+    <div id="div1"></div>
+</body>
+</html>

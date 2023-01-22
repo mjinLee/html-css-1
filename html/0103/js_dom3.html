@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li class="active">Text 1</li>
+        <li class="active">Text 2</li>
+        <li>Text 3</li>
+    </ul>
+    
+    <script>        
+        var cl = document.getElementsByClassName("active");
+        for(var i=0; i<cl.length;i++){
+            cl[i].style.color = "blue";
+        }
+    </script>
+</body>
+</html>

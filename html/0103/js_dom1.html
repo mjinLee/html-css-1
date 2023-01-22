@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+
+    <script>
+        // head 태그에도 script 올 수 있음
+        /* 제어 대상 찾기
+            document.getElementsByTagName("태그명") // ('태그명')
+             // 태그들의 객체를 담은 유사 배열을 리턴
+        */       
+    </script>
+</head>
+<body>
+    <ul>
+        <li>Text 1</li>
+        <li>Text 2</li>
+        <li>Text 3</li>
+    </ul>
+    <p>항목 1</p>
+    <p>항목 2</p>
+    <p>항목 3</p>
+    <ul>
+        <li>Text4</li>
+        <li>Text5</li>
+        <li>Text6</li>
+    </ul>
+    <script>
+        var lis = document.getElementsByTagName("li");
+        for(var i=0; i<lis.length;i++){
+            lis[i].style.color = "red";
+        }
+        lis[0].style.color="blue";
+        lis[1].style.color="red";
+        lis[2].style.color="brown";
+
+        var ps = document.getElementsByTagName('p');
+        for(var i=0; i<ps.length;i++){
+            ps[i].style.color = "green";
+            ps[i].style.fontWeight = "bold";
+        }
+    </script>
+</body>
+</html>

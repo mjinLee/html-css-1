@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        function printText(){
+            tx.value=prompt('입력: ');
+        }        
+        function init(){
+            btnPrint.onclick = printText;
+        }
+        window.onload = init;
+    </script>
+</head>
+<body>
+    <input type="button" value="click1" id="btnPrint">
+    <input type="text" id="tx" dir="rtl" value="">
+</body>
+</html>

@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1> DOM을 공부합시다</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더 보기</a> 
+                                    <!-- this.onclick=''; : 내용 한 번만 출력 -->
+    </div>
+    <div id="info"></div>
+
+    <script>
+        function addP(){
+            var newP = document.createElement("p"); // 요소 노드 만들기("요소명")
+            var txtNode = document.createTextNode("DOM은 document object model의 줄임말.");
+                        // <p> 태그의 내용 -> 텍스트 노드 생성    
+            newP.appendChild(txtNode); // 부모노드.appendChild(자식노드);
+    
+            document.getElementById("info").appendChild(newP); // div의 자식노드: newP
+        }
+                    
+
+    </script>
+</body>
+</html>

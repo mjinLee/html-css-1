@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        /*function printText1(){            
+            var liVal1 = document.getElementById("li-val1");
+            liVal1.innerText = "test 1";
+        }  
+        function printText2(){            
+            var liVal2 = document.getElementById("li-val2");
+            liVal2.innerText = "test 2";
+        }
+        function printText3(){            
+            var liVal3 = document.getElementById("li-val3");
+            liVal3.innerText = "test 3";
+        }      
+        function init(){
+            var btnVal1 = document.getElementById("btn-val1");
+            btnVal1.onclick = printText1;        
+            var btnVal2 = document.getElementById("btn-val2");
+            btnVal2.onclick = printText2;  
+            var btnVal3 = document.getElementById("btn-val3");
+            btnVal3.onclick = printText3;      
+        }
+        window.onload = init; */
+
+        window.onload = function (){
+            var btnVal1 = document.getElementById("btn-val1");
+            btnVal1.onclick = function (){
+                var liVal1 = document.getElementById("li-val1");
+                liVal1.innerText = "test 1";
+            }        
+            var btnVal2 = document.getElementById("btn-val2");
+            btnVal2.onclick = function (){
+                var liVal2 = document.getElementById("li-val2");
+                liVal2.innerText = "test 2";
+            }
+            var btnVal3 = document.getElementById("btn-val3");
+            btnVal3.onclick = function (){
+                var liVal3 = document.getElementById("li-val3");
+                liVal3.innerText = "test 3";
+            }
+        };
+    </script>
+</head>
+<body>
+    <ul>
+        <li id="li-val1">item 1</li>
+        <li id="li-val2">item 2</li>
+        <li id="li-val3">item 3</li>
+    </ul>
+    <input type="button" value="item1->test1" id="btn-val1">
+    <input type="button" value="item2->test2" id="btn-val2">
+    <input type="button" value="item3->test3" id="btn-val3">
+</body>
+</html>

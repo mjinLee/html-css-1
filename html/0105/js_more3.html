@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="container">
+        <h1> DOM을 공부합시다</h1>
+        <a href="#" onclick="addP(); this.onclick='';">더보기1</a> 
+        <a href="#" onclick="addP2(); this.onclick='';">더보기2</a>
+    </div>
+    <div id="info"></div>
+    <div id="info2"></div>
+
+    <script>
+        function addP(){
+            // p tag
+            var newP = document.createElement("p");
+            var txtNode = document.createTextNode("더보기1의 내용");   
+            newP.appendChild(txtNode);    
+            document.getElementById("info").appendChild(newP);
+
+            // img tag
+            var newImg = document.createElement("img");
+            // 속성노드만들기 : document.createAttribute("속성명");
+            var srcNode = document.createAttribute("src");
+            var altNode = document.createAttribute("alt");
+            srcNode.value = "images/dom.jpg";
+            altNode.value = "DOM 트리 예제 이미지";            
+            newImg.setAttributeNode(srcNode); // <img src="images/dom.jpg">
+            newImg.setAttributeNode(altNode);
+            document.getElementById("info").appendChild(newImg);
+        }
+        function addP2(){
+            var newP2 = document.createElement("p");
+            var txtNode2 = document.createTextNode("더보기2의 내용");
+            document.getElementById("info2").appendChild(newP2);
+            newP2.appendChild(txtNode2);
+        }               
+    </script>
+</body>
+</html>

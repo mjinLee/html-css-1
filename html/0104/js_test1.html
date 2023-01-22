@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>     
+        window.onload = function (){
+            var btnVal = document.getElementById("btn-val");
+            btnVal.onclick = function (){
+                                btnVal.value=prompt('입력: ');
+                            };
+        };
+    </script>
+</head>
+<body>
+    <input type="button" value="click" id="btn-val">
+</body>
+</html>

@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <section id="sec1">
+        <h1>Test</h1>
+        <ul>
+            <li class="it1">item 1</li>
+            <li class="it2">item 2</li>
+            <li class="it3">item 3</li>
+        </ul>
+    </section>
+    <input type="button" value="click" onclick="tr();">
+    <script>
+        function tr(){
+            var sec1 = document.getElementById("sec1");
+            var it1 = sec1.getElementsByClassName("it1")[0];
+            var it2 = sec1.getElementsByClassName("it2")[0];
+            var it3 = sec1.getElementsByClassName("it3")[0];
+            it2.textContent = "tt";
+        }
+    </script>
+</body>
+</html>

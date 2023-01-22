@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li>Text 1</li>
+        <li>Text 2</li>
+        <li>Text 3</li>
+    </ul>
+    <p>항목 1</p>
+    <p>항목 2</p>
+    <p>항목 3</p>
+    <ul>
+        <li>Text4</li>
+        <li>Text5</li>
+        <li>Text6</li>
+    </ul>
+    <script>        
+        var uls = document.getElementsByTagName("ul")[1]; // 특정 ul 태그 선택(배열처럼)
+        var lis = uls.getElementsByTagName('li');
+        for(var i=0; i<lis.length;i++){
+            lis[i].style.color = "blue";
+        }
+    </script>
+</body>
+</html>

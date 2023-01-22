@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM</title>
+</head>
+<body>
+    <ul>
+        <li id="id1">Text 1</li>
+        <li id="id2">Text 2</li>
+        <li id="active">Text 3</li>
+    </ul>
+    
+    <script>        
+        var ids = document.getElementById("active");
+        ids.style.color = "blue";
+
+        var ids = document.getElementById("id1");
+        ids.style.color = "red";
+
+        var ids = document.getElementById("id2");
+        ids.style.color = "green";
+    </script>
+</body>
+</html>

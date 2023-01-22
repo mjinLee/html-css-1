@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function prNums(){
+            var num1 = parseInt(prompt("num1 값 입력:",0)); // 초기값 : 0
+            var num2 = parseInt(prompt("num2 값 입력:"));
+            //alert(num1+num2);
+            //btnPr.value = num1+num2; // btnPr이 가리키는 input 태그의 value 값을 변경
+            //btnPr.type = "text";
+            spn.innerText=num1+num2; // span 태그의 문자 변경
+        }
+    </script>
+    <input type="button" value="클릭" onclick="prNums()" id="btnPr"><br>
+    <!-- <span onclick="alert('hi')">스팬</span> -->
+    <span onclick="prNums()" id="spn">스팬</span>
+</body>
+</html>

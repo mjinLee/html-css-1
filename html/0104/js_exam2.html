@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>               
+        function init(){
+            btnAdd.onclick = printAdd;
+        }
+        window.onload = init;
+
+        function printAdd(){
+            var n1 = parseInt(prompt('입력 x'));
+            var n2 = parseInt(prompt('입력 y'));
+            tx.value=n1+n2;
+        } 
+    </script>
+</head>
+<body>
+    <input type="button" value="더하기" id="btnAdd">
+    <input type="text" id="tx" dir="rtl" value="">
+</body>
+</html>
